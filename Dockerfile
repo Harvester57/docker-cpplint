@@ -2,7 +2,7 @@
 FROM python:3.10.2-alpine3.15
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "09-12-2021"
+LABEL lastupdate "2022-03-04"
 LABEL author "Florian Stosse"
 LABEL description "Cpplint v1.6.0, built using Python v3.10.2 Alpine-based image"
 LABEL license "MIT license"
