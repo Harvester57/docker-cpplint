@@ -4,7 +4,7 @@ FROM python:3.11.0rc1-alpine3.16
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "2022-08-23"
 LABEL author "Florian Stosse"
-LABEL description "Cpplint v1.6.0, built using Python v3.11.0-rc1 Alpine-based image"
+LABEL description "Cpplint v1.6.1, built using Python v3.11.0-rc1 Alpine-based image"
 LABEL license "MIT license"
 
 RUN addgroup -g 666 appuser && \
@@ -16,4 +16,4 @@ USER appuser
 
 # Cf. https://pypi.org/project/cpplint/
 RUN pip3 install --upgrade pip && \
-    pip3 install --trusted-host files.pythonhosted.org cpplint==1.6.0
+    pip3 install --trusted-host files.pythonhosted.org cpplint==1.6.1
