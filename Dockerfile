@@ -1,10 +1,10 @@
 # Cf. https://hub.docker.com/_/python/
-FROM python:3.11.0rc1-alpine3.16
+FROM python:3.11.1-alpine3.17
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "2022-08-23"
+LABEL lastupdate "2023-01-31"
 LABEL author "Florian Stosse"
-LABEL description "Cpplint v1.6.1, built using Python v3.11.0-rc1 Alpine-based image"
+LABEL description "Cpplint v1.6.1, built using Python v3.11.1 Alpine-based image"
 LABEL license "MIT license"
 
 RUN addgroup -g 666 appuser && \
