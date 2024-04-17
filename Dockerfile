@@ -2,9 +2,9 @@
 FROM python:3.12.3-alpine3.18
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "2023-09-23"
+LABEL lastupdate "2024-04-17"
 LABEL author "Florian Stosse"
-LABEL description "Cpplint v1.6.1, built using Python v3.11.5 Alpine-based image"
+LABEL description "Cpplint v1.6.1, built using Python v3.12.3 Alpine-based image"
 LABEL license "MIT license"
 
 RUN addgroup -g 666 appuser && \
