@@ -2,9 +2,9 @@
 FROM python:3.12.7-alpine3.20
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "2024-09-15"
+LABEL lastupdate "2024-10-08"
 LABEL author "Florian Stosse"
-LABEL description "Cpplint v1.6.1, built using Python v3.12.6 Alpine-based image"
+LABEL description "Cpplint v2.0.0, built using Python v3.12.7 Alpine-based image"
 LABEL license "MIT license"
 
 RUN addgroup -g 666 appuser && \
@@ -16,4 +16,4 @@ USER appuser
 
 # Cf. https://pypi.org/project/cpplint/
 RUN pip3 install --upgrade pip && \
-    pip3 install --trusted-host files.pythonhosted.org cpplint==1.6.1
+    pip3 install --trusted-host files.pythonhosted.org cpplint==2.0.0
