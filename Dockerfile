@@ -1,10 +1,10 @@
 # Cf. https://hub.docker.com/_/python/
 FROM python:3.13.2-alpine3.20
 
-LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "2024-10-08"
+LABEL maintainer "florian.stosse@gmail.com"
+LABEL lastupdate "2025-04-08"
 LABEL author "Florian Stosse"
-LABEL description "Cpplint v2.0.0, built using Python v3.12.7 Alpine-based image"
+LABEL description "Cpplint v2.0.2, built using Python v3.13.2 Alpine-based image"
 LABEL license "MIT license"
 
 RUN addgroup -g 666 appuser && \
@@ -16,4 +16,4 @@ USER appuser
 
 # Cf. https://pypi.org/project/cpplint/
 RUN pip3 install --upgrade pip && \
-    pip3 install --trusted-host files.pythonhosted.org cpplint==2.0.0
+    pip3 install --trusted-host files.pythonhosted.org cpplint==2.0.2
