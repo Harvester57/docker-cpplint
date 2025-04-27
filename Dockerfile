@@ -7,6 +7,9 @@ LABEL author="Florian Stosse"
 LABEL description="Cpplint v2.0.2, built using Python v3.13.3 Alpine-based image"
 LABEL license="MIT license"
 
+RUN apk update && \
+    apk upgrade --available
+
 RUN addgroup -g 666 appuser && \
     mkdir -p /home/appuser && \
     adduser -D -h /home/appuser -u 666 -G appuser appuser && \
