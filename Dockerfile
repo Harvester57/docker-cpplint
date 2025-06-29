@@ -19,4 +19,4 @@ USER appuser
 
 # Cf. https://pypi.org/project/cpplint/
 RUN pip3 install --upgrade pip && \
-    pip3 install --trusted-host files.pythonhosted.org cpplint==2.0.2 --user
+    pip3 install --trusted-host files.pythonhosted.org cpplint==2.0.2 --user --no-cache-dir
