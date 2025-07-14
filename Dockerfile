@@ -16,6 +16,7 @@ RUN addgroup -g 666 appuser && \
     chown -R appuser:appuser /home/appuser
 ENV PATH="/home/appuser/.local/bin:${PATH}"
 USER appuser
+COPY requirements.txt .
 
 # Cf. https://pypi.org/project/cpplint/
 RUN pip3 install --upgrade pip && \
