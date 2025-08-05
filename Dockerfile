@@ -19,3 +19,5 @@ COPY requirements.txt .
 
 # Cf. https://pypi.org/project/cpplint/
 RUN pip3 install -r requirements.txt --user --no-cache-dir
+
+ENTRYPOINT [ "cpplint" ]
