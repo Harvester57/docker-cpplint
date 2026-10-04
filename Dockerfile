@@ -1,25 +1,18 @@
 # Cf. https://hub.docker.com/_/python/
 FROM python:3.15.0rc2-alpine@sha256:a73535961d3114b7b2e6948ef2dd8d295b885a76d3c23e87e688856713c1cbac
 
-LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-10-26"
-LABEL author="Florian Stosse"
-LABEL description="Cpplint v2.0.2, built using Python v3.13 Alpine-based image"
-LABEL license="MIT license"
-
-# Upgrade packages and pip
-RUN apk update && \
-    apk upgrade --available && \
-    /usr/local/bin/python -m pip install --upgrade pip
+LABEL org.opencontainers.image.authors="Florian Stosse <florian.stosse@gmail.com>"
+LABEL org.opencontainers.image.created="2025-10-26"
+LABEL org.opencontainers.image.description="Cpplint v2.0.2, built using Python Alpine-based image"
+LABEL org.opencontainers.image.licenses="MIT license"
 
 RUN addgroup -g 666 appuser && \
-    mkdir -p /home/appuser && \
-    adduser -D -h /home/appuser -u 666 -G appuser appuser && \
-    chown -R appuser:appuser /home/appuser
-ENV PATH="/home/appuser/.local/bin:${PATH}"
+    adduser -D -h /home/appuser -u 666 -G appuser appuser
 
-# Switch to the newly created user
 USER appuser
+WORKDIR /home/appuser
+
+ENV PATH="/home/appuser/.local/bin:${PATH}"
 
 COPY requirements.txt .
 
